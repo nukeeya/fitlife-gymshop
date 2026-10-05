@@ -5,7 +5,7 @@ Standalone customer storefront for Cloudflare Pages. Product listings come from 
 ## Local development
 
 1. Copy `.env.example` to `.env.local`.
-2. Set `VITE_SUPABASE_URL` and `VITE_SUPABASE_ANON_KEY` to the existing FitLife Supabase project URL and public anon/publishable key. Never use a service-role key in this site.
+2. Set `VITE_SUPABASE_URL` and `VITE_SUPABASE_PUBLISHABLE_KEY` to the existing FitLife Supabase project URL and public publishable key. The app also accepts `VITE_SUPABASE_ANON_KEY`. Never use a service-role key in this site.
 3. From this directory, run `npm install`, then `npm run dev`.
 
 ## Supabase setup
@@ -18,7 +18,7 @@ Create a Pages project from this standalone storefront repository. Leave the roo
 
 - Build command: `npm run build`
 - Build output directory: `dist`
-- Environment variables: `VITE_SUPABASE_URL` and `VITE_SUPABASE_ANON_KEY`
+- Environment variables: `VITE_SUPABASE_URL` and `VITE_SUPABASE_PUBLISHABLE_KEY` (or `VITE_SUPABASE_ANON_KEY`)
 
 Cloudflare Pages serves this Vite single-page app from `index.html`; no custom `_redirects` rule is needed. Vite embeds the public URL and anon key at build time; these are public credentials and protected by the database RLS policies.
 
