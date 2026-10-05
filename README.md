@@ -20,6 +20,6 @@ Create a Pages project from this standalone storefront repository. Leave the roo
 - Build output directory: `dist`
 - Environment variables: `VITE_SUPABASE_URL` and `VITE_SUPABASE_ANON_KEY`
 
-The included `public/_redirects` supports client-side routing if routes are added later. Vite embeds the public URL and anon key at build time; these are public credentials and protected by the database RLS policies.
+Cloudflare Pages serves this Vite single-page app from `index.html`; no custom `_redirects` rule is needed. Vite embeds the public URL and anon key at build time; these are public credentials and protected by the database RLS policies.
 
 Customer orders are requests, not paid/confirmed transactions. Staff should contact the customer to confirm delivery and payment.
